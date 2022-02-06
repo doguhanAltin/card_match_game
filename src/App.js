@@ -1,10 +1,10 @@
 import "./App.css";
-import Card from "./components/Card/Card";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { lockCard, MatchCard, shuffleCards } from "./redux/CardsSlice";
+import { shuffleCards } from "./redux/CardsSlice";
 import CardTable from "./components/Card/CardTable";
 import EndGame from "./components/EndGame/EndGame";
+import User from "./components/User/User";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ function App() {
   }, [dispatch]);
 
   const cards = useSelector((state) => state.Cards.items);
-  const user1Point = useSelector((state) => state.Cards.user1Point);
-  const user2Point = useSelector((state) => state.Cards.user2Point);
+  const user1List = useSelector((state) => state.Cards.user1List);
+  const user2List = useSelector((state) => state.Cards.user2List);
 
 
 
@@ -27,12 +27,15 @@ function App() {
     console.log("bitti oyun");
   }
   return (
+    <>
     <div className="GameScreen">
-      <div>{user1Point}</div>
+    
+      <User items={user1List} name="Club 1"/>
       <CardTable />
-      <div>{user2Point}</div>
+      <User items= {user2List}  name="Club 2" />
       <EndGame finish={finish} / >
     </div>
+    </>
   );
 }
 

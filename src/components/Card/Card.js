@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { openCard, MatchCard } from "../../redux/CardsSlice";
+import { useDispatch } from "react-redux";
+import { openCard } from "../../redux/CardsSlice";
 import "./card.css";
 function Card({ props }) {
   const dispatch = useDispatch();

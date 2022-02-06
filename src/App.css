@@ -1,14 +1,15 @@
 .GameScreen {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: 100px;
   margin-right: 100px;
+  margin-top: 50px;
 }
 
 
 .App {
   text-align: center;
-  background-color: aqua;
+  background-color: rgb(231, 245, 240);
   width: 840px;
   margin-left: auto;
   margin-right: auto;

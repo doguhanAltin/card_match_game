@@ -1,5 +1,5 @@
 .cardDiv {
-  height: 130px;
+  height: 110px;
   width: 110px;
   background-color: rgb(182, 176, 176);
   margin: 15px;
@@ -15,10 +15,10 @@
   transform: translateX(-100%) rotateY(-180deg);
 }
 .closedCard {
-  font-size: 100px;
+  font-size: 80px;
 }
 .openedCard {
-  height: 130px;
+  height: 110px;
   width: 110px;
   border-radius: 10%;
 }
